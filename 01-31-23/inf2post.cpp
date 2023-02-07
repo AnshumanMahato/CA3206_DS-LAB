@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-using namespace std;
-
 int size, top = -1;
 char *stk;
 
@@ -43,12 +41,12 @@ int priority(char val)
 
 int main()
 {
-	printf("Enter length of string: ");
+	printf("Enter length of expression: ");
 	scanf("%d", &size);
 	char *exp, *post;
-	stk = new char[size + 1];
-	exp = new char[size + 1];
-	post = new char[size + 1];
+	stk = (char *)malloc((size + 1) * sizeof(char));
+	exp = (char *)malloc((size + 1) * sizeof(char));
+	post = (char *)malloc((size + 1) * sizeof(char));
 	printf("\nEnter infix expression: ");
 	scanf("%s", exp);
 	int i = 0, len = -1;
