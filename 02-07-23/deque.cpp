@@ -123,6 +123,7 @@ int main()
             traverse();
             break;
         case 6:
+            printf("\nExiting...");
             exit(0);
         default:
             printf("Wrong choice\n");
